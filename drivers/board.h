@@ -184,9 +184,9 @@ extern "C"
  *
  */
 
-/*#define BSP_USING_ADC1*/
-/*#define BSP_USING_ADC2*/
-/*#define BSP_USING_ADC3*/
+#define BSP_USING_ADC1
+#define BSP_USING_ADC2
+#define BSP_USING_ADC3
 
 /*-------------------------- ADC CONFIG END --------------------------*/
 

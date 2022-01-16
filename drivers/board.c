@@ -33,6 +33,10 @@ RT_WEAK void rt_hw_board_init()
     rt_components_board_init();
 #endif
 
+
+   /*
+    * spi1 GPIO init
+    * */
     GPIO_InitTypeDef GPIO_InitStruct = {0};
     __HAL_RCC_SPI1_CLK_ENABLE();
     __HAL_RCC_GPIOA_CLK_ENABLE();
@@ -50,4 +54,6 @@ RT_WEAK void rt_hw_board_init()
        GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
        GPIO_InitStruct.Pull = GPIO_NOPULL;
        HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+
 }

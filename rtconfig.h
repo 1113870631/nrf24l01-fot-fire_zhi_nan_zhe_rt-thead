@@ -90,6 +90,7 @@
 #define RT_USING_SERIAL
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_PIN
+#define RT_USING_ADC
 #define RT_USING_SPI
 
 /* Using USB */
@@ -99,7 +100,7 @@
 
 /* POSIX layer and C standard library */
 
-#define RT_LIBC_USING_TIME
+#define RT_USING_LIBC
 /* end of POSIX layer and C standard library */
 
 /* Network */
@@ -209,8 +210,8 @@
 #define PKG_USING_NRF24L01_DEMO
 #define PKG_NRF24L01_DEMO_ROLE_PTX
 #define PKG_NRF24L01_DEMO_SPI_DEV_NAME "spi10"
-#define PKG_NRF24L01_DEMO_CE_PIN 37   //PC5
-#define PKG_NRF24L01_DEMO_IRQ_PIN 36  //PC4
+#define PKG_NRF24L01_DEMO_CE_PIN 37
+#define PKG_NRF24L01_DEMO_IRQ_PIN 36
 #define PKG_NRF24L01_DEMO_INTERVAL_SEND 500
 /* end of peripheral libraries and drivers */
 
