@@ -192,8 +192,8 @@ static void thread1_entry(void *parameter) {
                         direction=0;
                          }
                 }
-                 rt_kprintf("speed:%d\n",speed);
-                 rt_kprintf("direction: %d \n",direction);
+                 //rt_kprintf("speed:%d\n",speed);
+                 //rt_kprintf("direction: %d \n",direction);
                 //获得方向电压 处理方向数据
                 dir_v= get_ADC_V(adc_dev, ADC_DEV_CHANNEL_C3);
                 if(dir_v>=C3_mid_v){//右转电压
@@ -214,7 +214,7 @@ static void thread1_entry(void *parameter) {
                                            dir=50;
                                          }
                                 }
-                                 rt_kprintf("dir:%d\n",dir);
+                                 //rt_kprintf("dir:%d\n",dir);
                 rt_thread_mdelay(1000/HZ);//控制处理频率
 
             }
