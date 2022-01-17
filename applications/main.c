@@ -76,9 +76,11 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* hadc)
 
 }
 
-
+rt_sem_t nrf_sem;
 int main(void)
 {
+    //创建给nrfdemo 的信号量
+                  nrf_sem = rt_sem_create("nrf_sem",0,RT_IPC_FLAG_FIFO);
      LOG_D("Hello RT-Thread!");
      rt_thread_delay(5000);
      LOG_D("delay ok \n");
